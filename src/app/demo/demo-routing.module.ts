@@ -7,6 +7,7 @@ import { Demo02ProductComponent } from './components/demo02-product/demo02-produ
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
 
 const routes: Routes = [
+  {path:'', redirectTo:'demo01',pathMatch:'full'},
   {path : 'demo01', component:Demo01Component},
   {path : 'demo02Product', component : Demo02ProductComponent, children:[
     {path : 'details', component : Demo02ProductDetailsComponent},
