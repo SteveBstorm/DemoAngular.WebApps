@@ -5,6 +5,7 @@ import { Demo02ProductDetailsComponent } from './components/demo02-product-detai
 import { Demo02ProductEditComponent } from './components/demo02-product-edit/demo02-product-edit.component';
 import { Demo02ProductComponent } from './components/demo02-product/demo02-product.component';
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
+import { Demo03Component } from './components/demo03/demo03.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'demo01',pathMatch:'full'},
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path : 'details', component : Demo02ProductDetailsComponent},
     {path : 'edit', component : Demo02ProductEditComponent}
   ]},
-  {path : 'demo02Stock', component: Demo02StockComponent}
+  {path : 'demo02Stock', component: Demo02StockComponent},
+  {path : 'demo03', component: Demo03Component},
 ];
 
 @NgModule({

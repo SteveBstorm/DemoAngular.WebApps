@@ -7,6 +7,8 @@ import { Demo02ProductComponent } from './components/demo02-product/demo02-produ
 import { Demo02ProductEditComponent } from './components/demo02-product-edit/demo02-product-edit.component';
 import { Demo02ProductDetailsComponent } from './components/demo02-product-details/demo02-product-details.component';
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
+import { Demo03Component } from './components/demo03/demo03.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.com
     Demo02ProductComponent,
     Demo02ProductEditComponent,
     Demo02ProductDetailsComponent,
-    Demo02StockComponent
+    Demo02StockComponent,
+    Demo03Component
   ],
   imports: [
     CommonModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    FormsModule
   ]
 })
 export class DemoModule { }

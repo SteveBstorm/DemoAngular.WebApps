@@ -1,0 +1,28 @@
+<h2>One Way Binding Demo</h2>
+<h3>{{title}}</h3>
+<p>{{zeroToTen}} <- la valeur est continuellement actualisée dans le Typescript, l'HTML rafraichi cette valeur.</p>
+
+        <h2>Two Way Binding Demo</h2>
+
+        <p>Nous avons une variable value qui contient la valeur : {{value}}</p>
+        <p>Nous avons une variable couleur qui contient la valeur : {{couleur}}</p>
+        <div><label>Variable value : </label><input type="text" [(ngModel)]="value"></div>
+        <div><label>Variable couleur : </label><input type="color" [(ngModel)]="couleur"></div>
+
+        <h2>Event binding</h2>
+
+        <input type="button" value="Dire coucou!" (click)="direCoucou()" (mouseover)="debug(btnCoucou)" #btnCoucou>
+        <input type="button" value="Debugue le bouton" (click)="debug(btnDebug)" #btnDebug>
+        <div (click)="debug(divDebug)" #divDebug>Debugue la div</div>
+
+        <h2>Attribute binding</h2>
+        <p>EstConnecte : {{estConnecte}}</p>
+        <p>Avec le disabled ou hidden :</p>
+        <div>
+            <input type="button" value="Se connecter" (click)="SeConnecter()" [disabled]="estConnecte">
+            <input type="button" value="Se déconnecter" (click)="SeDeconnecter()" [hidden]="estConnecte == false">
+        </div>
+        <p>Avec une ternaire sur value, plus qu'un seul bouton</p>
+        <div>
+            <input type="button" [value]="(estConnecte)?'Se déconnecter':'Se connecter'" (click)="ChangerConnection()">
+        </div>
