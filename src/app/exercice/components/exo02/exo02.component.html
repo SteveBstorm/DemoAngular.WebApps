@@ -1,0 +1,8 @@
+<h4>{{time | showChrono}}</h4>
+<!-- div>input:button*3 -->
+<div>
+    <input type="button" value="Start" (click)="startChrono()" [disabled]="interval">
+    <input type="button" value="Pause" (click)="pauseChrono()" [disabled]="!interval">
+    <input type="button" value="Reset" (click)="resetChrono()" [disabled]="time == 0">
+</div>
+
