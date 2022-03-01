@@ -10,6 +10,7 @@ import { ExerciceModule } from './exercice/exercice.module';
 import { ExerciceRoutingModule } from './exercice/exercice-routing.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     /** plus besoin d'importer dans le app.module les modules de routing d'autres modules, seul le loadChildren est nécessaire! */
     // DemoModule,
     // DemoRoutingModule,

@@ -9,6 +9,8 @@ import { Demo02ProductDetailsComponent } from './components/demo02-product-detai
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
 import { Demo03Component } from './components/demo03/demo03.component';
 import { FormsModule } from '@angular/forms';
+import { Demo04Component } from './components/demo04/demo04.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { FormsModule } from '@angular/forms';
     Demo02ProductEditComponent,
     Demo02ProductDetailsComponent,
     Demo02StockComponent,
-    Demo03Component
+    Demo03Component,
+    Demo04Component
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class DemoModule { }
