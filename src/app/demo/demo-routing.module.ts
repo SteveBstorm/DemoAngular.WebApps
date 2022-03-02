@@ -14,11 +14,11 @@ import { Demo07Component } from './components/demo07/demo07.component';
 const routes: Routes = [
   {path:'', redirectTo:'demo01',pathMatch:'full'},
   {path : 'demo01', component:Demo01Component},
-  {path : 'demo02Product', component : Demo02ProductComponent, children:[
+  {path : 'demo02product', component : Demo02ProductComponent, children:[
     {path : 'details', component : Demo02ProductDetailsComponent},
     {path : 'edit', component : Demo02ProductEditComponent}
   ]},
-  {path : 'demo02Stock', component: Demo02StockComponent},
+  {path : 'demo02stock', component: Demo02StockComponent},
   {path : 'demo03', component: Demo03Component},
   {path : 'demo04', component: Demo04Component},
   {path : 'demo05', component: Demo05Component},

@@ -1,50 +1,50 @@
 <nav>
-    <!-- ul>li*2>a>div -->
     <ul>
-        <li>
-            <a routerLink="/demonstration/demo01">
-                <div>Démonstration base</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo02Product/details">
-                <div>Démonstration routing avec children</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo03">
-                <div>Démonstration Binding</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo04">
-                <div>Démonstration Pipes</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo05">
-                <div>Démonstration Directives de composants</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo06">
-                <div>Démonstration Directives structurelles</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/demonstration/demo07">
-                <div>Démonstration Directives d'attributs (Custom)</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/exercice/exo01">
-                <div>Exercice mise en place des modules</div>
-            </a>
-        </li>
-        <li>
-            <a routerLink="/exercice/exo02">
-                <div>Exercice chronomètre</div>
-            </a>
-        </li>
+        <ng-container *ngFor="let module of menu">
+            <li *ngIf="module.isVisible">
+                <a [routerLink]="module.url" *ngIf="module.url">
+                    <div>
+                        {{module.title}}
+                    </div>
+                </a>
+                <div *ngIf="!module.url" (mouseenter)="showChildren(module)" (mouseleave)="hiddenChildren(module)">
+                    {{module.title}}
+                    <ul *ngIf="module.children && module.children.length > 0">
+                        <ng-container *ngFor="let mainPage of module.children">
+                            <li *ngIf="mainPage.isVisible">
+                                <a [routerLink]="mainPage.url" *ngIf="mainPage.url">
+                                    <div>{{mainPage.title}}</div>
+                                </a>
+                                <div *ngIf="!mainPage.url" (mouseenter)="showChildren(mainPage)"
+                                    (mouseleave)="hiddenChildren(mainPage)">{{mainPage.title}}
+                                    <ul *ngIf="mainPage.children && mainPage.children.length > 0">
+                                        <ng-container *ngFor="let demoPage of mainPage.children">
+                                            <li *ngIf="demoPage.isVisible">
+                                                <a [routerLink]="demoPage.url" *ngIf="demoPage.url">
+                                                    <div>{{demoPage.title}}</div>
+                                                </a>
+                                                <div *ngIf="!demoPage.url" (mouseenter)="showChildren(demoPage)"
+                                                    (mouseleave)="hiddenChildren(demoPage)">{{demoPage.title}}
+                                                    <ul *ngIf="demoPage.children && demoPage.children.length > 0">
+                                                        <ng-container *ngFor="let childPage of demoPage.children">
+                                                            <li *ngIf="childPage.isVisible">
+                                                                <a [routerLink]="childPage.url" *ngIf="childPage.url">
+                                                                    <div>{{childPage.title}}</div>
+                                                                </a>
+                                                                <div *ngIf="!childPage.url">{{childPage.title}}</div>
+                                                            </li>
+                                                        </ng-container>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ng-container>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </li>
+        </ng-container>
     </ul>
 </nav>
