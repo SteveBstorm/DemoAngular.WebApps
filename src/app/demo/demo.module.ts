@@ -11,6 +11,8 @@ import { Demo03Component } from './components/demo03/demo03.component';
 import { FormsModule } from '@angular/forms';
 import { Demo04Component } from './components/demo04/demo04.component';
 import { SharedModule } from '../shared/shared.module';
+import { Demo05Component } from './components/demo05/demo05.component';
+import { Demo06Component } from './components/demo06/demo06.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { SharedModule } from '../shared/shared.module';
     Demo02ProductDetailsComponent,
     Demo02StockComponent,
     Demo03Component,
-    Demo04Component
+    Demo04Component,
+    Demo05Component,
+    Demo06Component
   ],
   imports: [
     CommonModule,

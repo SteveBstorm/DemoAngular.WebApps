@@ -1,0 +1,17 @@
+<h3>Directive de composant</h3>
+
+<p>Grace à [ngClass], nous avons possibilité d'intéragir avec nos class de l'élément html.</p>
+<div [ngClass]="{'bg-red': isRed, 'bg-blue':!isRed}">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cumque voluptatem nobis! Quisquam quos dolor commodi, nemo possimus alias quas harum temporibus officiis accusantium ducimus, dolore laudantium! Aliquam, nihil adipisci?
+</div>
+<div [ngClass]="divClass">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cumque voluptatem nobis! Quisquam quos dolor commodi, nemo possimus alias quas harum temporibus officiis accusantium ducimus, dolore laudantium! Aliquam, nihil adipisci?
+</div>
+<p>Le [ngStyle] permet un contrôle sur l'attribut style de la balise, à l'aide d'un objet.</p>
+<div [ngStyle]="{'background-color':bgColor}">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo eum eius libero iusto iste enim animi perferendis incidunt odit hic nemo neque exercitationem eveniet dolor tempore minus, repudiandae optio.
+</div>
+
+<input type="range" min="0" max="256" [(ngModel)]="size">
+
+<div [ngStyle]="{'min-height':size+'px' , 'width':size+'px'}" [ngClass]="{'bg-red':isRed,'bg-green':!isRed}"></div>

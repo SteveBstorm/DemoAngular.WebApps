@@ -1,0 +1,35 @@
+<h3>Directive structurelle</h3>
+
+<label>Généré le texte :</label><input type="checkbox" [(ngModel)]="isGenerate">
+<div *ngIf="isGenerate">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt praesentium enim, sunt nisi quam est sit, eaque porro iste accusantium dolor eligendi sapiente cum atque. Placeat, provident atque. Ducimus, impedit.
+</div>
+
+<!-- <label>Choisir nombre d'itération</label><input type="range" min="0" max="10" step="1" [(ngModel)]="nbIterate"> -->
+<ul>
+    <li *ngFor="let i of students">
+        {{i}}
+    </li>
+</ul>
+<input [(ngModel)]="newStudent" type="text"><input type="button" value="Ajouter étudiant" (click)="saveStudent()">
+
+<section>
+    <article *ngFor="let article of articles">
+        <h1>{{article.title}}</h1>
+        <h2 *ngIf="article.subtitle">{{article.subtitle}}</h2>
+        <p>{{article.content}}</p>
+        <img *ngIf="article.img" [src]="article.img">
+    </article>
+</section>
+
+<label>Pizza</label><input type="radio" name="nourriture" value="Pizza" [(ngModel)]="nourriture">
+<label>Spaghetti</label><input type="radio" name="nourriture" value="Spaghetti" [(ngModel)]="nourriture">
+<label>Hamburger</label><input type="radio" name="nourriture" value="Hamburger" [(ngModel)]="nourriture">
+<label>Autre</label><input type="radio" name="nourriture" value="" [(ngModel)]="nourriture">
+
+<div [ngSwitch]="nourriture">
+    <ng-container *ngSwitchCase="'Pizza'">Tu as raison, les pizzas c'est la vie!</ng-container>
+    <ng-container *ngSwitchCase="'Spaghetti'">Attention ça tâche!</ng-container>
+    <ng-container *ngSwitchCase="'Hamburger'">Un ça va, deux c'est trop...</ng-container>
+    <ng-container *ngSwitchDefault>Prends ton temps pour choisir...</ng-container>
+</div>

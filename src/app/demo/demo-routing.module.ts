@@ -7,6 +7,8 @@ import { Demo02ProductComponent } from './components/demo02-product/demo02-produ
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
 import { Demo03Component } from './components/demo03/demo03.component';
 import { Demo04Component } from './components/demo04/demo04.component';
+import { Demo05Component } from './components/demo05/demo05.component';
+import { Demo06Component } from './components/demo06/demo06.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'demo01',pathMatch:'full'},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path : 'demo02Stock', component: Demo02StockComponent},
   {path : 'demo03', component: Demo03Component},
   {path : 'demo04', component: Demo04Component},
+  {path : 'demo05', component: Demo05Component},
+  {path : 'demo06', component: Demo06Component},
 ];
 
 @NgModule({
