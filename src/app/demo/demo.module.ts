@@ -16,6 +16,8 @@ import { Demo06Component } from './components/demo06/demo06.component';
 import { Demo07Component } from './components/demo07/demo07.component';
 import { Demo08messagerieComponent } from './components/demo08messagerie/demo08messagerie.component';
 import { Demo08messageComponent } from './components/demo08message/demo08message.component';
+import { Demo08Component } from './components/demo08/demo08.component';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -31,13 +33,17 @@ import { Demo08messageComponent } from './components/demo08message/demo08message
     Demo06Component,
     Demo07Component,
     Demo08messagerieComponent,
-    Demo08messageComponent
+    Demo08messageComponent,
+    Demo08Component
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule,
     SharedModule
+  ],
+  providers:[
+    UserService
   ]
 })
 export class DemoModule { }

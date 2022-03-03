@@ -10,6 +10,7 @@ import { Demo04Component } from './components/demo04/demo04.component';
 import { Demo05Component } from './components/demo05/demo05.component';
 import { Demo06Component } from './components/demo06/demo06.component';
 import { Demo07Component } from './components/demo07/demo07.component';
+import { Demo08Component } from './components/demo08/demo08.component';
 import { Demo08messagerieComponent } from './components/demo08messagerie/demo08messagerie.component';
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path : 'demo06', component: Demo06Component},
   {path : 'demo07', component: Demo07Component},
   {path : 'demo08', component: Demo08messagerieComponent},
+  {path : 'demo08service', component: Demo08Component},
 ];
 
 @NgModule({

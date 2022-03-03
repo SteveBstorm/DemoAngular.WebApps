@@ -1,0 +1,7 @@
+<div *ngIf="!isConnected; else salutUser">
+    <input type="text" placeholder="Veuillez introduire votre nom d'utilisateur..." [(ngModel)]="username">
+    <input type="button" value="Login" (click)="saveUser()">
+</div>
+<ng-template #salutUser><h1>Bonjour {{username}}!</h1>
+<input type="button" value="Logout" (click)="newUser()">
+</ng-template>
