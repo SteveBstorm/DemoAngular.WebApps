@@ -11,13 +11,15 @@ import { ExerciceRoutingModule } from './exercice/exercice-routing.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
+import { NavigationLinkComponent } from './components/navigation-link/navigation-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Sample01Component,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    NavigationLinkComponent
   ],
   imports: [
     BrowserModule,

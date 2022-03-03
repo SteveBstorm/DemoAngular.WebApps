@@ -1,0 +1,15 @@
+<li *ngIf="link.isVisible">
+    <a [routerLink]="link.url" *ngIf="link.url">
+        <div>
+            {{link.title}}
+        </div>
+    </a>
+    <div *ngIf="!link.url" [appToggleMenu]="link">
+        {{link.title}}
+        <ul *ngIf="link.children && link.children.length > 0">
+            <ng-container *ngFor="let child of link.children">
+                <app-navigation-link [link]="child"></app-navigation-link>
+            </ng-container>
+        </ul>
+    </div>
+</li>

@@ -1,0 +1,11 @@
+<div>
+    <div>
+        From : {{message.from}} <br>
+        For : {{message.receiver}} <br>
+        "{{message.text}}" <br>
+        {{message.sendDate.getDate()+' - '+ (message.sendDate.getMonth()+1) + ' - ' + message.sendDate.getFullYear()}}    
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="newMessage"><input type="button" value="Répondre" (click)="send()">
+    </div>
+</div>

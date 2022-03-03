@@ -22,7 +22,8 @@ export class NavigationComponent implements OnInit {
       new Link('Démonstration 04', '/demonstration/demo04'),
       new Link('Démonstration 05', '/demonstration/demo05'),
       new Link('Démonstration 06', '/demonstration/demo06'),
-      new Link('Démonstration 07', '/demonstration/demo07')
+      new Link('Démonstration 07', '/demonstration/demo07'),
+      new Link('Input/Output', '/demonstration/demo08'),
     ),
     new Link('Exercice', undefined, true,
       new Link('Exercice 01', '/exercice/exo01'),
@@ -34,11 +35,4 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showChildren(link : Link){
-    link.children?.forEach(c => c.isVisible=true);
-  }
-
-  hiddenChildren(link : Link){
-    link.children?.forEach(c => c.isVisible=false);
-  }
 }

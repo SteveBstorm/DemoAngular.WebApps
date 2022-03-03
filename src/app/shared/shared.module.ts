@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { ShowChronoPipe } from './pipes/show-chrono.pipe';
 import { HighligthDirective } from './directives/highligth.directive';
+import { ToggleMenuDirective } from './directives/toggle-menu.directive';
 
 
 
@@ -10,7 +11,8 @@ import { HighligthDirective } from './directives/highligth.directive';
   declarations: [
     ToFahrenheitPipe,
     ShowChronoPipe,
-    HighligthDirective
+    HighligthDirective,
+    ToggleMenuDirective
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { HighligthDirective } from './directives/highligth.directive';
   exports:[
     ToFahrenheitPipe,
     ShowChronoPipe,
-    HighligthDirective
+    HighligthDirective,
+    ToggleMenuDirective
   ]
 })
 export class SharedModule { }
