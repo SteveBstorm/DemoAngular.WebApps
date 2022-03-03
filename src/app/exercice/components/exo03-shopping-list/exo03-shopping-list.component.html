@@ -1,0 +1,10 @@
+<h1>Shopping list! 😉</h1>
+<div *ngIf="list.length > 0; else noArticle">
+    <ul>
+        <li *ngFor="let article of list; let i = index">
+            {{article}}<input type="button" value="Supprimer" (click)="deleteArticle(i)">
+        </li>
+    </ul>
+</div>
+<ng-template #noArticle><p>Oups, nous n'avons rien pour le moment...</p></ng-template>
+<app-exo03-shopping-add-form (productEmitter)="addArticle($event)"></app-exo03-shopping-add-form>
