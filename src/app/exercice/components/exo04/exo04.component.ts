@@ -19,9 +19,9 @@ export class Exo04Component implements OnInit {
     this.viewList = this._service.articleList
   }
 
-  updateList() {
-    this.viewList = this._service.articleList
-  }
+  // updateList() {
+  //   this.viewList = this._service.articleList
+  // }
   plus(index : number) {
     this._service.addQty(index)
   }

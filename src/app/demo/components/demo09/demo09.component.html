@@ -1,0 +1,29 @@
+<h3>Demo Formulaires (Reactive Forms)</h3>
+<form [formGroup]="myFormGroup" (ngSubmit)="validation()">
+   <p> Nom : <input type="text" formControlName="nom"></p>
+   <p *ngIf="myFormGroup.controls['nom'].invalid">Le nom est requis</p>
+   <p> Prénom : <input 
+      [ngClass]="(myFormGroup.controls['prenom'].touched && myFormGroup.controls['prenom'].invalid) ? 'invalid' : 'valid'"  
+      type="text" 
+      formControlName="prenom" 
+      placeholder="votre prénom"> </p>
+
+      <div *ngIf="myFormGroup.controls['prenom'].invalid">
+         <p style="color : red" 
+            *ngIf=" myFormGroup.controls['prenom'].errors['myCustomError']">
+            {{myFormGroup.controls['prenom'].errors['myCustomError']}}
+         </p>
+      <p style="color : red" 
+         *ngIf=" myFormGroup.controls['prenom'].errors['myError2']">
+         {{myFormGroup.controls['prenom'].errors['myError2']}}
+         </p>
+      </div>
+   <p> Email : <input type="email" formControlName="email"> </p>
+      <button type="button" (click)="addControl()">Ajouter un champ</button>
+   <div formArrayName="choix">
+      <p *ngFor="let c of getArray().controls; let i = index">
+         <input type="text" [formControlName]="i" >
+      </p>
+   </div>
+   <p><button type="sumbit" [disabled]="myFormGroup.invalid">Valider</button></p>
+</form>

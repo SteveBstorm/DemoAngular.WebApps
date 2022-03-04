@@ -8,7 +8,7 @@ import { Demo02ProductEditComponent } from './components/demo02-product-edit/dem
 import { Demo02ProductDetailsComponent } from './components/demo02-product-details/demo02-product-details.component';
 import { Demo02StockComponent } from './components/demo02-stock/demo02-stock.component';
 import { Demo03Component } from './components/demo03/demo03.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo04Component } from './components/demo04/demo04.component';
 import { SharedModule } from '../shared/shared.module';
 import { Demo05Component } from './components/demo05/demo05.component';
@@ -18,6 +18,9 @@ import { Demo08messagerieComponent } from './components/demo08messagerie/demo08m
 import { Demo08messageComponent } from './components/demo08message/demo08message.component';
 import { Demo08Component } from './components/demo08/demo08.component';
 import { UserService } from './services/user.service';
+import { Demo09Component } from './components/demo09/demo09.component';
+import { Demo10Component } from './components/demo10/demo10.component';
+import { ResolvedComponent } from './components/demo10/resolved/resolved.component';
 
 
 @NgModule({
@@ -34,16 +37,19 @@ import { UserService } from './services/user.service';
     Demo07Component,
     Demo08messagerieComponent,
     Demo08messageComponent,
-    Demo08Component
+    Demo08Component,
+    Demo09Component,
+    Demo10Component,
+    ResolvedComponent
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers:[
-    UserService
   ]
 })
 export class DemoModule { }

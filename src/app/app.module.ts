@@ -12,6 +12,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
 import { NavigationLinkComponent } from './components/navigation-link/navigation-link.component';
+import { FourOfourComponent } from './components/four-ofour/four-ofour.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavigationLinkComponent } from './components/navigation-link/navigation
     Sample01Component,
     NavigationComponent,
     FooterComponent,
-    NavigationLinkComponent
+    NavigationLinkComponent,
+    FourOfourComponent
   ],
   imports: [
     BrowserModule,

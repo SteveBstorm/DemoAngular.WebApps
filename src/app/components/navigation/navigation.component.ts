@@ -25,6 +25,7 @@ export class NavigationComponent implements OnInit {
       new Link('Démonstration 07', '/demonstration/demo07'),
       new Link('Input/Output', '/demonstration/demo08'),
       new Link('Service', '/demonstration/demo08service'),
+      new Link('Formulaire', '/demonstration/demo09'),
     ),
     new Link('Exercice', undefined, true,
       new Link('Exercice 01', '/exercice/exo01'),
