@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  public username?:string;
+  public username :string ="";
   constructor() { }
 
   login(username:string){
@@ -12,11 +12,11 @@ export class UserService {
   }
 
   logout(){
-    this.username = undefined;
+    this.username = "";
   }
 
   checkIfUserSaved(){
-    return this.username != undefined;
+    return this.username != "";
   }
 
 }

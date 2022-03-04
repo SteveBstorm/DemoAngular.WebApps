@@ -29,7 +29,8 @@ export class NavigationComponent implements OnInit {
     new Link('Exercice', undefined, true,
       new Link('Exercice 01', '/exercice/exo01'),
       new Link('Exercice 02', '/exercice/exo02'),
-      new Link('Exercice 03 ShoppingList','/exercice/exo03')
+      new Link('Exercice 03 ShoppingList','/exercice/exo03'),
+      new Link('Exercice 04 ShoppingList++','/exercice/exo04'),
     )
   ];
   constructor() { }

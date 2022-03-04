@@ -9,6 +9,9 @@ import { Exo03ShoppingListComponent } from './components/exo03-shopping-list/exo
 import { Exo03ShoppingAddFormComponent } from './components/exo03-shopping-add-form/exo03-shopping-add-form.component';
 import { FormsModule } from '@angular/forms';
 import { Exo03ShoppingListItemComponent } from './components/exo03-shopping-list-item/exo03-shopping-list-item.component';
+import { Exo04Component } from './components/exo04/exo04.component';
+import { AjoutproduitComponent } from './components/exo04/ajoutproduit/ajoutproduit.component';
+import { ShoppingService } from './components/exo04/services/shopping.service';
 
 
 @NgModule({
@@ -17,13 +20,16 @@ import { Exo03ShoppingListItemComponent } from './components/exo03-shopping-list
     Exo02Component,
     Exo03ShoppingListComponent,
     Exo03ShoppingAddFormComponent,
-    Exo03ShoppingListItemComponent
+    Exo03ShoppingListItemComponent,
+    Exo04Component,
+    AjoutproduitComponent
   ],
   imports: [
     CommonModule,
     ExerciceRoutingModule,
     SharedModule,
     FormsModule
-  ]
+  ],
+  providers : []
 })
 export class ExerciceModule { }

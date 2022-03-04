@@ -14,7 +14,7 @@ export class Demo08Component implements OnInit {
   constructor(private _service : UserService) { }
 
   ngOnInit(): void {
-    this.username = this._service.username ?? "";
+    this.username = this._service.username;
     this.isConnected = this._service.checkIfUserSaved();
   }
 

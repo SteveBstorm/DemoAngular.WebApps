@@ -1,0 +1,14 @@
+<h3>Shopping List (avec service)</h3>
+<hr />
+<app-ajoutproduit ></app-ajoutproduit>
+<hr />
+<h4>Liste produit</h4>
+<ul>
+    <li *ngFor="let a of viewList; let i = index">
+        {{a.nom}} : {{a.qty}} 
+        &nbsp; <button (click)="plus(i)">+</button>
+        &nbsp; <button (click)="moins(i)">-</button>
+        &nbsp; <button (click)="supprimer(i)">X</button>
+
+    </li>
+</ul>
